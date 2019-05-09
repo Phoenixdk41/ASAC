@@ -12,7 +12,7 @@
                 <p id="asac">ASAC</p>
                 <p id="asacText">Application de Saisie des Astreintes et des Consommés</p></br></br>
 
-                <form id="formulaire">
+                <form id="formulaire" method="post" action="Controle/controleAuth.php" >
                     <label>Identifiants</label> : <input type="text" name="identifiants"/></br></br>
                     <label>Mot de passe</label> : <input type="password" name="password"/></br></br>
                     <button id = "connection">{{ boutonConnection }}</button>
