@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="Design\auth\css.css"/>
+        <link rel="stylesheet" href="Design\bootstrap\css\bootstrap.css"/>
         <title>Page d'authentification - ASAC</title>
     </head>
     <script src="JS\VueJS\vue.js"></script>
@@ -15,14 +16,13 @@
                 <form id="formulaire" method="post" action="Controle/controleAuth.php" >
                     <label>Identifiants</label> : <input type="text" name="identifiants"/></br></br>
                     <label>Mot de passe</label> : <input type="password" name="password"/></br></br>
-                    <button id = "connection">{{ boutonConnection }}</button>
-                    <button id = "inscription" @click = inscriptonPage>{{ inscription }}</button>
+                    <button id = "connection" type="button" class="btn btn-lg">{{ boutonConnection }}</button></br></br>
                 </form>
-
-
-            </div>
-
-        
+                <p id = inscription> Si vous n'avez pas d'identifiant, vous devez en faire une demande</br>
+                <button type="button" class="btn btn-lg"><a href="Vue/inscription.php" style="text-decoration:none">Inscription</a>
+                </button>
+                </p>
+            </div> 
     </body>
 
 
@@ -38,6 +38,7 @@
         },
         methods: {
             inscriptionPage: function(){
+                document.location.href="test.html";
             }
         }
     })

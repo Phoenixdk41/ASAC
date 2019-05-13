@@ -6,7 +6,7 @@
         <title>Acceuil</title>
         
         <link rel="stylesheet" type="text/css" media="screen" href="header.css"/>
-        <link rel="stylesheet" href="ASAC\Application\site\Design\bootstrap\css\bootstrap.css"/>
+        <link rel="stylesheet" href="..\bootstrap\css\bootstrap.css"/>
     </head>
 
     <header>
