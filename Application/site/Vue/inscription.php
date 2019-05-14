@@ -11,16 +11,16 @@
     <img id="logo" src="../Design/img/altranLogo.png"/>
     <p id ="asac">ASAC</p>
 </header>
-    <p>
+    <div id = "formulaireInscription">
         <form method="post" action="Controle/controleInscription.php">
-        <label>Votre nom</label> : <input type="text" name="nomInscription"/></br></br>
-        <label>Votre prenom</label> : <input type="text" name="prenomInscription"/></br></br>
-        <label>Votre adresse email</label> : <input type="text" name="emailInscription"/></br></br>
-        <label>Votre entreprise de référence</label> : <input type="text" name="entrepriseInscription"/></br></br>
-        <button id = "connection" type="submit" class="btn btn-lg" 
+        <label>Votre nom</label> : <input type="text" name="nomInscription" required/></br></br>
+        <label>Votre prenom</label> : <input type="text" name="prenomInscription" required/></br></br>
+        <label>Votre adresse email</label> : <input type="text" name="emailInscription" required/></br></br>
+        <label>Votre entreprise de référence</label> : <input type="text" name="entrepriseInscription" required/></br></br>
+        <button id = "submit" type="submit" class="btn btn-lg" 
         onclick=confirmation()>Envoyer la demande</button>
 
-</p>
+</div>
     </body>
 
 </html>
