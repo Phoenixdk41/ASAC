@@ -19,11 +19,12 @@ else ($_SESSION['active'] == false)
             <img id ="altranLogo" src="//asac/Design/img/altranLogo.png"/>
             <a href="//asac/accueil.php" type="button" class="btn btn-info">Accueil</a>
             <a href="" type="button" class="btn btn-info">Projets</a>
+            <a href="" type="button" class="btn btn-info">Astreintes</a>
             <a href="" type="button" class="btn btn-info">Consultants</a>
             <a href="" type="button" class="btn btn-info">Clients</a>
             <a href="" type="button" class="btn btn-info">Facturation</a>
             <a href="" type="button" class="btn btn-info">Aide</a>
-            <a href="" type="button" class="btn btn-info"><?php echo $connectionButton; ?></a>
+            <a href="//asac/auth.php" type="button" class="btn btn-info"><?php echo $connectionButton; ?></a>
     </header>
 
     <!--Séparation du code, à fractionner plus tard-->

@@ -1,8 +1,9 @@
 <?php
 session_start();
-$_SESSION['login'] = "id";
-$_SESSION['password'] = "password";
-$_SESSION['active'] = false;
+require 'Class/Person.php';
+$user = new Person();
+$_SESSION['user'] = serialize($user);
+$_SESSION['active'] = $user->getActive();
 ?>
 <!DOCTYPE html>
 <html>

@@ -1,27 +1,38 @@
 <?php 
-include 'C:\wamp64\www\ASAC\Application\site\DAO\connectionAsac.php';
+session_start();
+require '../Class/Person.php';
+include '../DAO/connectionAsac.php';
 
-$nom = htmlspecialchars($_POST['identifiants']);
+$user = unserialize($_SESSION['user']);
+$login = htmlspecialchars($_POST['login']);
+$_SESSION['login'] = $login;
+$user->setLogin($login);
+$password = htmlspecialchars($_POST['password']);
+$_SESSION['password'] = $password;
+$user->setPassword($password);
+echo "OK fin env";
 
-
-$nomBaseSql = $asac->query('select * from testasac where nom = \'root\';');
+$nomBaseSql = $asac->query('select * from application_user where Login ="'.$login.';"');
 while ($nomBase = $nomBaseSql->fetch())
-{
+ {
 
-    if  ($nom == $nomBase['nom'])
-    {
-        echo("connection base ok    " . $nomBase['nom']);
-    }
+     if  ($login == $nomBase['Login'])
+     {
+         echo("connection base ok    " . $nomBase['nom']);
+         $active = true;
+         $user->setActive($active);
+     }
 
-    elseif ($nom != $nomBase['nom'])
-    {
-        echo('User Invalid');
-    }
+     elseif ($login != $nomBase['nom'])
+     {
+         echo('User Invalid');
+     }
 
-    else
-    {
-    echo("erreur dans la condition");
-    }
-};
-$nomBaseSql->closeCursor();
+     else
+     {
+     echo("erreur dans la condition");
+     }
+ };
+ $nomBaseSql->closeCursor();
+ echo ($user->getLogin());
 ?>
