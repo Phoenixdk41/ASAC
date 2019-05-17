@@ -40,7 +40,6 @@
             <a href="//maquette/auth.php" type="button" class="btn btn-info">
             <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
             Connexion</a>
-            
 
     </header>
 
@@ -58,9 +57,9 @@
   <thead>
     <tr>
       <th scope="col">Projets</th>
-      <th scope="col">Avancement global</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Details</th>
+      <th scope="col">Progression</th>
+      <th scope="col">Alert(s) <span class="glyphicon glyphicon-bell" aria-hidden="true"></span></th>
     </tr>
   </thead>
   <tbody>
@@ -68,7 +67,7 @@
       <th scope="row">Tenue à la charge</th>
       <td>Mark</td>
       <td>Otto</td>
-      <td>@mdo</td>
+      <td><span class="badge">4</span></td>
     </tr>
     <tr>
       <th scope="row">Convergence Drive</th>
