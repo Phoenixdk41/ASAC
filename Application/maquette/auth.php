@@ -20,7 +20,17 @@ session_start();
                     <label>Mot de passe</label> : <input type="password" name="password"/></br></br>
                     <button id = "connection" type="submit" class="btn btn-lg">Se connecter</button></br></br>
                 </form>
-            </div> 
+            </div>
+
+            <button id = "retourAccueil" type="text" class="btn btn-lg">Retour</button>
+            
+            <style>
+            #retourAccueil
+            {
+                text-align: center;
+            }
+
+            </style>
     </body>
 
 </html>
