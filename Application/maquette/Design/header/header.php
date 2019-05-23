@@ -1,46 +1,38 @@
-<?php
-if ($_SESSION['connecter'] == 1)
-{
-    $connectionButton = "Deconnexion";
-}
-else
-{
-    $connectionButton = "Connexion";
-    session_destroy();
-} 
-?>
+<nav class="navbar navbar-light bg-light">
+<img id ="altranLogo" src="Design/img/altranLogo.png"/>
+ <!-- Logo Altran -->
+ <button onclick = "afficherAccueil()" id="accueil" type="button" class="btn btn-info" >Accueil</button>
 
-<!DOCTYPE html>
-<html>
-    <head> 
-        <link rel="stylesheet" href="..\bootstrap\css\bootstrap.css"/>
-    </head>
-    <header>
-        <nav class="navbar navbar-light bg-light">
-            <img id ="altranLogo" src="//asac/Design/img/altranLogo.png"/>
-            <a href="//asac/accueil.php" type="button" class="btn btn-info">Accueil</a>
-            <a href="" type="button" class="btn btn-info">Projets</a>
-            <a href="" type="button" class="btn btn-info">Astreintes</a>
-            <a href="" type="button" class="btn btn-info">Consultants</a>
-            <a href="" type="button" class="btn btn-info">Clients</a>
-            <a href="" type="button" class="btn btn-info">Facturation</a>
-            <a href="" type="button" class="btn btn-info">Aide</a>
-            <a href="//asac/auth.php" type="button" class="btn btn-info"><?php echo $connectionButton; ?></a>
-    </header>
+<button onclick = "afficherProjet()" id="projet" type="button" class="btn btn-info">
+<span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+Projets  <span class="badge">4</span></button>
 
-    <!--Séparation du code, à fractionner plus tard-->
+<!-- Bouton Accueil -->
+<button id="Astreintes" type="button" class="btn btn-info">
+<span class="glyphicon glyphicon-time" aria-hidden="true"></span> 
+Astreintes</button>
 
-    <style type="text/css">
+<!-- Bouton Consultants -->
+<button id="Consultants" type="button" class="btn btn-info">
+<span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
+Consultants</button>
 
-    #altranLogo
-    {
-        width: 160px;
-        float: left;
-        padding-right: 10px;
-        padding-left: 10px;
-        padding-top: 1px;
-        border: 2px solid #007EAF;
-        border-radius: 10px;
-        margin-right: 5px;
-    }
-    </style>
+<!-- Bouton Clients -->
+<button  id="clients" type="button" class="btn btn-info">
+<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+Clients</button>
+
+<!-- Bouton Facturation -->
+<button id="facturation" type="button" class="btn btn-info">
+<span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span>
+Facturation </button>
+
+<!-- Bouton Consultants -->
+<button id="aide" type="button" class="btn btn-info">
+<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+Aide</button>
+
+<!-- Bouton Connexion -->
+<button id="connection" type="button" class="btn btn-info">
+<span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+Connexion</button>
