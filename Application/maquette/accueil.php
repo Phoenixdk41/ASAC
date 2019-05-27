@@ -1,3 +1,7 @@
+<?php 
+$valeurFormulaire = $_POST['valeurFormulaire'] = 0;
+echo $valeurFormulaire;
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,7 +28,7 @@
 
 
 <div id = "projetBody">
-<form method="" action="">
+<form method="post">
    <p>
        <label for="Client">Choississez un projet pour la consultation ?</label><br />
        <select name="client" id="client">
@@ -42,15 +46,22 @@
                <option value="sysexp">Systeme decisionnel expert</option>
            </optgroup>
        </select>
+       <input type="submit" name="valeurFormulaire" value="Valider"/>
    </p>
 </form>
   <table class="table">
+    <thead>
+    <tr>
+    <th scope="col">Projet - Tenue à la charge - Auchan</th>
+    </tr>
+    </thead>
+    <th scope="row">Convergence Drive</th>
+      <td>Les details de la descriptions sont à definir avec le client</td>
+      <td>
 
   </table>
   
 </div>
-
-
     </body>
 </html>
 
@@ -67,6 +78,10 @@
         border: 2px solid #007EAF;
         border-radius: 10px;
         margin-right: 5px;
+    }
+    #projetBody
+    {
+        display: none;
     }
     </style>
 
