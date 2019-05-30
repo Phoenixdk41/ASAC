@@ -5,13 +5,13 @@ session_start();
 <html>
     <head>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" href="Design\auth\css.css"/>
-        <link rel="stylesheet" href="Design\bootstrap\css\bootstrap.css"/>
+        <link rel="stylesheet" href="Templates\auth\css.css"/>
+        <link rel="stylesheet" href="Templates\bootstrap\css\bootstrap.css"/>
         <title>Page d'authentification - ASAC</title>
     </head>
     <body> 
             <div id="auth">
-                <img id="logo" src="Design/img/altranLogo.png"/>
+                <img id="logo" src="Templates/img/altranLogo.png"/>
                 <p id="asac">ASAC</p>
                 <p id="asacText">Application de Saisie des Astreintes et des Consommés</p></br></br>
 

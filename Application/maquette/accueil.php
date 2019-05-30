@@ -1,19 +1,28 @@
-<?php 
-$valeurFormulaire = $_POST['valeurFormulaire'] = 0;
-echo $valeurFormulaire;
+<?php  
+session_start();
+$isset = isset($_SESSION['login']);
+
+if ($isset) 
+{
+    $ifConnect = "Deconnexion";
+}
+else {
+    $ifConnect = "Connexion";
+}
+
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" href="Design\accueil\accueil.css"/>
-        <link rel="stylesheet" href="Design\bootstrap\css\bootstrap.css"/>
+        <link rel="stylesheet" href="Templates\accueil\accueil.css"/>
+        <link rel="stylesheet" href="Templates\bootstrap\css\bootstrap.css"/>
         <title>Accueil- Asac</title>
     </head>
     
   <body>
     <header>
-      <?php include 'Design/header/header.php';?> 
+      <?php include 'Templates/header/header.php';?> 
     </header>
 
     <div>
@@ -23,45 +32,61 @@ echo $valeurFormulaire;
     </div>
 
 <div id="accueilBody">
-  <?php include 'Design/accueil/accueilBody.php';?>
-</div>
-
-
-<div id = "projetBody">
-<form method="post">
-   <p>
-       <label for="Client">Choississez un projet pour la consultation ?</label><br />
-       <select name="client" id="client">
-           <optgroup label="Auchan">
-               <option value="tenueALaCharge">Tenue à la charge</option>
-               <option value="convergenceDrive">Convergence Drive</option>
-               <option value="optiDecode">Optimisation de la decode</option>
-               <option value="neo">Neo Extenda</option>
-           </optgroup>
-           <optgroup label="Boulanger">
-               <option value="javaProjet">Developpement en Java Project</option>
-           </optgroup>
-           <optgroup label="Altran">
-               <option value="asac">Asac</option>
-               <option value="sysexp">Systeme decisionnel expert</option>
-           </optgroup>
-       </select>
-       <input type="submit" name="valeurFormulaire" value="Valider"/>
-   </p>
-</form>
-  <table class="table">
-    <thead>
+<table class="table">
+  <thead>
     <tr>
-    <th scope="col">Projet - Tenue à la charge - Auchan</th>
+      <th scope="col">Projets</th>
+      <th scope="col">Details</th>
+      <th scope="col">Progression</th>
+      <th scope="col">Alert(s) <span class="glyphicon glyphicon-bell" aria-hidden="true"></span></th>
     </tr>
-    </thead>
-    <th scope="row">Convergence Drive</th>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Tenue à la charge</th>
       <td>Les details de la descriptions sont à definir avec le client</td>
       <td>
-
-  </table>
-  
+      <div class="progress">
+<div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+<span>60% effectué </span>
 </div>
+</div>
+    </td>
+      <td><span class="badge">4</span></td>
+    </tr>
+    <tr>
+      <th scope="row">Convergence Drive</th>
+      <td>Les details de la descriptions sont à definir avec le client</td>
+      <td>
+      <div class="progress">
+<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em;">
+0%
+</div>
+</div> 
+      
+      </td>
+      <td>A demarrer</td>
+    </tr>
+    <tr>
+      <th scope="row">Optimisation Décode</th>
+      <td>Les details de la descriptions sont à definir avec le client</td>
+      <td>
+      <div class="progress">
+<div class="progress-bar progress-bar-success progress-bar-striped.active role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+<span>100% - terminé (success)</span>
+</div>
+</div>
+      </td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div id = "projetBody">
+    <?php include 'Templates/accueil/projetBody.php';?>  
+</div>
+
     </body>
 </html>
 
