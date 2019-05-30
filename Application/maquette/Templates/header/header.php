@@ -24,11 +24,11 @@ else {
   </li>
 
   <li class="nav-item">
-    <a class="nav-link" id="dailyPage" data-toggle="tab" href="#" role="tab" aria-controls="contact" aria-selected="false">Astreintes</a>
+    <a class="nav-link" id="dailyPage" data-toggle="tab" href="http://maquette/astreintes.php" role="tab" aria-controls="contact" aria-selected="false">Astreintes</a>
   </li>
 
   <li class="nav-item">
-    <a class="nav-link" id="connection" data-toggle="tab" href="#" role="tab" aria-controls="contact" aria-selected="false"><span class="glyphicon glyphicon-off" aria-hidden="true"><?php echo($ifConnect)?></span></a>
+    <a class="nav-link" id="connection" data-toggle="tab" href="http://maquette/auth.php" role="tab" aria-controls="contact" aria-selected="false"><span class="glyphicon glyphicon-off" aria-hidden="true"><?php echo($ifConnect)?></span></a>
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">

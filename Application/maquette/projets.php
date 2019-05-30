@@ -57,8 +57,8 @@ else {
     <th scope="col">BDC</th>
     <th scope="col">Montant</th>
     <th scope="col">Montant prévu</th>
-    <th scope="col">Contact Client</th>
     <th scope="col">Avancement</th>
+    <th scope="col">Contact Client</th>
 
     </thead>
     <tr>
