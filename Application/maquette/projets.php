@@ -39,17 +39,18 @@ else {
            </optgroup>
        </select>
        <input type="submit" name="valeurFormulaire" value="Valider"/>
-       <button><span class="glyphicon glyphicon-plus"></span> Ajouter un projet</button>
+       <a href="ajouterProjet.php" class="btn btn-default btn-sm"Ajouter un projet<span class="glyphicon glyphicon-plus"></span></a>
    </p>
 </form>
 </fieldset>
   <table class="table">
     <thead>
-    <tr>
+    <tr class="success">
     <th scope="col">Projet - Tenue à la charge - Auchan
     Periode du <input type="date"/> au <input type="date"/></th>
     </tr>
     </thead>
+    <thead>
     <th scope="col">Début</th>
     <th scope="col">Fin</th>
     <th scope="col">Maco</th>
@@ -59,9 +60,10 @@ else {
     <th scope="col">Montant prévu</th>
     <th scope="col">Avancement</th>
     <th scope="col">Contact Client</th>
-
     </thead>
-    <tr>
+
+    <thead>
+    <tr  class="active">
     <td>27/09/2018</td>
     <td>En cours</td>
     <td>901221865</td>
@@ -79,6 +81,42 @@ else {
         </button>
         </td>
     </tr>
+    </thead>
+
+    
+    <th scope="col">Astreintes enregistrées</th>
+    </thead>
+
+<thead>
+    <th scope="col">Types</th>
+    <th scope="col">Consultants</th>
+    <th scope="col">Dates</th>
+    <th scope="col">Montant</th>
+    <th scope="col">Details</th>
+    </thead>
+
+    <tr  class="active">
+    <td>Astreintes téléphoniques</td>
+    <td>Mohamed Taleb</td>
+    <td>30/12/2018</td>
+    <td>250,00 €</td>
+    <td><center><span class="glyphicon glyphicon-search"></span></center></td>
+    </tr>
+    <tr>
+    <td>Astreintes téléphoniques</td>
+    <td>Jeremy Morgado</td>
+    <td>05/02/2019</td>
+    <td>300,00 €</td>
+    <td><center><span class="glyphicon glyphicon-search"></span></center></td>
+    </tr>
+    <tr  class="active">
+    <td>Interventions</td>
+    <td>Jeremy Morgado</td>
+    <td>05/03/2019</td>
+    <td>380,00 €</td>
+    <td><center><span class="glyphicon glyphicon-search"></span></center></td>
+    </tr>   
+
 
 
   </table>
