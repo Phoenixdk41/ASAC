@@ -22,7 +22,10 @@ session_start();
                 </form>
             </div>
 
-            <button id = "retourAccueil" type="text" class="btn btn-lg">Retour</button>
+            <a href="accueil.php" ><center>Retour</center></a>
+            <?php
+            session_destroy();
+            ?>
             
             <style>
             #retourAccueil
