@@ -1,6 +1,6 @@
 <?php
 
-Class Person {
+Class Application_User {
     private $_Id_User;
     private $_Last_Name;
     private $_First_Name;
@@ -8,9 +8,8 @@ Class Person {
     private $_Password;
     private $_Mail;
     private $_Active;
-    private $_ifConnect = false;
 
-    public function hydrate(array $donneesBdd)
+    public function hydrateApplication_User(array $donneesBdd)
     {
         if (isset($donneesBdd['Id_User']))
         {
@@ -136,19 +135,6 @@ Class Person {
     public function setActive($Active)
     {
         $this->_Active = $Active;
-    }
-
-    public function getIfConnect()
-    {
-        return $this->_ifConnect;
-    }
-
-    public function setIfConnect($ifConnect)
-    {
-        if (is_bool($ifConnect))
-        {
-            $this->_ifConnect= $ifConnect;
-        }
     }
 }
 ?>

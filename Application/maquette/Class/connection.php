@@ -1,14 +1,5 @@
 <?php
 
-class ConnexionBdd extends PDO {
-        private $_host = '127.0.0.1';
-        private $_dbname = 'applicationasac';
-        private $_userToBdd = 'root';
-        private $_passwordToBase = 'ASAC';
-
-
-        public function __construct()
-        {
                 try
                 {
                 $asac = new PDO ('mysql:host=127.0.0.1;dbname=asac','root','ASAC',array(PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
@@ -17,11 +8,9 @@ class ConnexionBdd extends PDO {
                 {
                         die('Erreur : ' . $e->getMessage());
                 }
-        }
+        
 
 
-
-}
 
 ?>
 
