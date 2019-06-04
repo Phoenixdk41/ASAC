@@ -1,24 +1,25 @@
 <?php
 session_start();
-
-$isset = isset($_SESSION['login']);
-
-if ($isset) 
-{
-    $ifConnect = "Deconnexion";
-}
-else {
-    $ifConnect = "Connexion";
-} 
-
+include 'Model/Env/functions.php';
+$ifConnect = ifConnect();
+$profilConsultant = profilConsultant();
 ?>
+
+<!DOCTYPE html>
+<html>
     <head>
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="Templates\accueil\accueil.css"/>
         <link rel="stylesheet" href="Templates\bootstrap\css\bootstrap.css"/>
         <title>Projets- Asac</title>
     </head>
-    <?php include 'Templates/header/header.php';?>
+      
+  <body>
+
+<header>
+    <?php buildHeader($ifConnect,$profilConsultant);?> 
+</header>
+
 <fieldset>
 <form method="post">
    <p>

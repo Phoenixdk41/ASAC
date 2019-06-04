@@ -1,16 +1,10 @@
 <?php  
 session_start();
-$isset = isset($_SESSION['login']);
-
-if ($isset) 
-{
-    $ifConnect = "Deconnexion";
-}
-else {
-    $ifConnect = "Connexion";
-}
-
+include 'Model/Env/functions.php';
+$ifConnect = ifConnect();
+$profilConsultant = profilConsultant();
 ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -21,9 +15,10 @@ else {
     </head>
     
   <body>
-    <header>
-      <?php include 'Templates/header/header.php';?> 
-    </header>
+
+<header>
+    <?php buildHeader($ifConnect,$profilConsultant);?> 
+</header>
 
     <div>
         <p>
@@ -83,9 +78,6 @@ else {
 </table>
 </div>
 
-<div id = "projetBody">
-    <?php include 'Templates/accueil/projetBody.php';?>  
-</div>
 
     </body>
 </html>
@@ -93,17 +85,7 @@ else {
 <!-- Partie CSS à inclure dans un fichier à part -->
 
 <style type="text/css">
-    #altranLogo
-    {
-        width: 160px;
-        float: left;
-        padding-right: 10px;
-        padding-left: 10px;
-        padding-top: 1px;
-        border: 2px solid #007EAF;
-        border-radius: 10px;
-        margin-right: 5px;
-    }
+  
     #projetBody
     {
         display: none;

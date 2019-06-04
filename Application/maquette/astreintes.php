@@ -1,15 +1,8 @@
 <?php
 session_start();
-
-$isset = isset($_SESSION['login']);
-
-if ($isset) 
-{
-    $ifConnect = "Deconnexion";
-}
-else {
-    $ifConnect = "Connexion";
-} 
+include 'Model/Env/functions.php';
+$ifConnect = ifConnect();
+$profilConsultant = profilConsultant();
 
 ?>
     <head>
@@ -18,7 +11,11 @@ else {
         <link rel="stylesheet" href="Templates\bootstrap\css\bootstrap.css"/>
         <title>Astreintes- Asac</title>
     </head>
-    <?php include 'Templates/header/header.php';?>
+
+<body>
+    <header>
+        <?php include 'Templates/header/header.php';?>
+    </header>
 
 
 <button>Saisir une astreinte</button>
@@ -62,6 +59,8 @@ else {
     <td>Decode Englos</td>
     </tr>   
   </table>
+
+  </body>
 
 
 <script type="javascript/text">
