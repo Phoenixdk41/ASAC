@@ -13,9 +13,9 @@ $profilConsultant = profilConsultant();
     </head>
 
 <body>
-    <header>
-        <?php include 'Templates/header/header.php';?>
-    </header>
+<header>
+    <?php buildHeader($ifConnect,$profilConsultant);?> 
+</header>
 
 
 <button>Saisir une astreinte</button>
