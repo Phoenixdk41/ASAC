@@ -1,6 +1,6 @@
 <?php  
 session_start();
-include 'Model/Env/functions.php';
+include $_SERVER['DOCUMENT_ROOT'].'/Model/Env/functions.php';
 $ifConnect = ifConnect();
 $profilConsultant = profilConsultant();
 ?>

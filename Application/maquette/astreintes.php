@@ -18,8 +18,7 @@ $profilConsultant = profilConsultant();
 </header>
 
 
-<button>Saisir une astreinte</button>
-<button>Saisir une IE</button>
+<a href="Templates/astreintes/saisiesAstreinte.php"><button>Saisir une Astreintes ou IE</button></a></button>
 
 <table class="table">
 
@@ -49,6 +48,7 @@ $profilConsultant = profilConsultant();
     <td>05/02/2019</td>
     <td>300,00 €</td>
     <td>Pop-caisse Corporate</td>
+    <td>Non</td>
     </tr>
     <tr  class="active">
     <td>Interventions</td>
@@ -57,6 +57,7 @@ $profilConsultant = profilConsultant();
     <td>05/03/2019</td>
     <td>380,00 €</td>
     <td>Decode Englos</td>
+    <td>Oui</td>
     </tr>   
   </table>
 

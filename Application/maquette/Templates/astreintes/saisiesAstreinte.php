@@ -1,6 +1,6 @@
 <?php
  session_start();
-include '../../Model/Env/functions.php';
+include $_SERVER['DOCUMENT_ROOT'].'/Model/Env/functions.php';
 $ifConnect = ifConnect();
 $profilConsultant = profilConsultant();
 ?>
@@ -10,10 +10,11 @@ $profilConsultant = profilConsultant();
         <link rel="stylesheet" href="..\bootstrap\css\bootstrap.css"/>
         <title>Saisies des Astreintes - Asac</title>
     </head>
+<header>
+<?php buildHeader($ifConnect,$profilConsultant);?> 
+</header>
 
-
-<form method="post" class="form-inline" action="" name="formAstreintes"
-onsubmit=" return validate()">
+<form method="post" class="form-inline" action="" name="formAstreintes">
 
 <label for="formAstreintesTypes">Types d'astreintes : </label>
 <select class="form-control" id="formAstreintesTypes" name="formAstreintesTypes">
@@ -75,44 +76,69 @@ onsubmit=" return validate()">
 
 <div class="form-group">
     <label for="formAstreintesHeures">Nombres d'heures : </label>
-    <input type="text" class="form-control" id="formAstreintesHeures" name="formAstreintesHeures"  placeholder="Ex : 1">
+    <input type="text" class="form-control" id="formAstreintesHeures" name="formAstreintesHeures"  placeholder="Ex : 0, 1..." onkeyup="verif_nombre(this);" required>
   </div>
   </br>
 
+  <div class="form-group">
+  <label for="ifIE">Etes vous intervenu durant votre astreintes ? </label></br>
+    <label class="radio-inline"><input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked="checked" onclick="ifIE()"> Non</label>
+    <label class="radio-inline"><input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" onclick ="ifIE()"> Oui</label>
+  </div>
+  </br>
+
+  <div class="form-group "id="ifIE">
+    <label for="formAstreintesIEHeures">Nombres d'heures : </label>
+    <input type="text" class="form-control"  placeholder="Ex : 0, 1...">
+  </div></br>
+
+  
+
+
   <label for="formAstreintesDescriptions">Descriptions : </label> </br>
-  <textarea class="form-control" rows="3" col="3" id="formAstreintesDescriptions" name="formAstreintesDescriptions" required></textarea>
-
-    <div id="ifIE">
-
+  <textarea class="form-control" rows="3" col="3" id="formAstreintesDescriptions" name="formAstreintesDescriptions" required></textarea></br>
 
 
   <input type="submit" value="Valider" alt="Envoyer la saisie pour validation"/>
-  <input tpye="reset" value="RAZ"/>
+  <input type="reset" value="RAZ"/>
   </form>
 
   <script type="text/javascript" >
-  function validate()
-{
-     if (document.formAstreintes.formAstreintesHeures.value != is_int())
-     {
-         return true;
-     }
-     else
-     {
-         alert ("Le nombre d'heure doit être saisies")
-         return false;
-     }
-}
-  
-  
-  
-  
-  </script>
 
-function surligne(champ, erreur)
-{
-   if(erreur)
-      champ.style.backgroundColor = "#fba";
-   else
-      champ.style.backgroundColor = "";
-}
+
+function verif_nombre(champ)
+  {
+	var chiffres = new RegExp("[0-9]");
+	var verif;
+	var points = 0;
+ 
+	for(x = 0; x < champ.value.length; x++)
+	{
+            verif = chiffres.test(champ.value.charAt(x));
+	    if(champ.value.charAt(x) == "."){points++;}
+            if(points > 1){verif = false; points = 1;}
+  	    if(verif == false){champ.value = champ.value.substr(0,x) + champ.value.substr(x+1,champ.value.length-x+1); x--;}
+	}
+  }
+
+  function ifIE()
+  {
+     var visible = document.getElementById("ifIE");
+
+    if (document.getElementById('inlineRadio2').checked)
+    {
+    visible.style.display = "block";
+  }
+   else 
+  {
+    visible.style.display = "none";
+  }
+  }
+
+  function raz()
+  {
+
+  }
+
+  window.onload = ifIE();
+  </script>

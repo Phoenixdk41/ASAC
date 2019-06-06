@@ -62,32 +62,32 @@ function buildHeader($ifConnect,$profilConsultant)
     {
         if ($profilConsultant == "Administrateur")
         {
-          include 'Templates/header/headerAdmin.php';
+          include $_SERVER['DOCUMENT_ROOT'].'/Templates/header/headerAdmin.php';
         }
 
         elseif ($profilConsultant == "Chef de Projet")
         {
-          include 'Templates/header/headerProjectManager.php';
+          include $_SERVER['DOCUMENT_ROOT'].'/Templates/header/headerProjectManager.php';
         }
 
         elseif ($profilConsultant == "ADV")
         {
-          include 'Templates/header/headerADV.php';
+          include $_SERVER['DOCUMENT_ROOT'].'/Templates/header/headerADV.php';
         }
 
         elseif ($profilConsultant == "Consultant")
         {
-          include 'Templates/header/headerConsultant.php';
+          include $_SERVER['DOCUMENT_ROOT'].'/Templates/header/headerConsultant.php';
         }
 
         elseif ($profilConsultant == "Client") 
         {
-          include 'Templates/header/headerConsultant.php';
+          include $_SERVER['DOCUMENT_ROOT'].'/Templates/header/headerConsultant.php';
         }
   }
   else 
   {
-    include 'Templates/header/headerOffline.php';
+    include $_SERVER['DOCUMENT_ROOT'].'/Templates/header/headerOffline.php';
   }
 }
 ?>
