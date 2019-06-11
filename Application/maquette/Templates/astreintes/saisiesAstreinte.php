@@ -74,14 +74,8 @@ $profilConsultant = profilConsultant();
     <option>Du lundi 20h00 au lundi suivant 8h00</option>
 </select></br>
 
-<div class="form-group">
-    <label for="formAstreintesHeures">Nombres d'heures : </label>
-    <input type="text" class="form-control" id="formAstreintesHeures" name="formAstreintesHeures"  placeholder="Ex : 0, 1..." onkeyup="verif_nombre(this);" required>
-  </div>
-  </br>
-
   <div class="form-group">
-  <label for="ifIE">Etes vous intervenu durant votre astreintes ? </label></br>
+  <label for="ifIE">Etes-vous intervenu durant votre astreintes ? </label></br>
     <label class="radio-inline"><input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked="checked" onclick="ifIE()"> Non</label>
     <label class="radio-inline"><input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" onclick ="ifIE()"> Oui</label>
   </div>
@@ -89,7 +83,7 @@ $profilConsultant = profilConsultant();
 
   <div class="form-group "id="ifIE">
     <label for="formAstreintesIEHeures">Nombres d'heures : </label>
-    <input type="text" class="form-control"  placeholder="Ex : 0, 1...">
+    <input type="text" class="form-control"  placeholder="Ex : 0, 1..." onkeyup="verif_nombre(this);">
   </div></br>
 
   

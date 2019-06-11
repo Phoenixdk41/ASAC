@@ -21,9 +21,9 @@ $profilConsultant = profilConsultant();
 </header>
 
     <div>
-        <p>
+        <p><center>
         Bienvenue sur la page de l'application maquette, pour avoir une vision complete depuis votre status, merci de vous connecter.
-        </p>
+        </p></center>
     </div>
 
 <div id="accueilBody">

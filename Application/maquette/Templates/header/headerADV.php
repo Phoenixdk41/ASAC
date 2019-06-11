@@ -1,6 +1,6 @@
 <ul class="nav nav-tabs" id="menu" role="tablist">
   <li class="nav-item">
-    <img id ="altranLogo" src="Templates/img/altranLogo.png"/>
+    <img id ="altranLogo" src="//maquette/Templates/img/altranLogo.png/>
 
   <li class="nav-item">
     <a class="nav-link active" id="mainPage" data-toggle="tab" href="http://maquette/accueil.php" role="tab" aria-controls="home" aria-selected="true">Accueil</a>
