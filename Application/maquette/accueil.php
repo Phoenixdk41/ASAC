@@ -1,6 +1,7 @@
 <?php  
 session_start();
 include $_SERVER['DOCUMENT_ROOT'].'/Model/Env/functions.php';
+include $_SERVER['DOCUMENT_ROOT'].'/Model/Db/sql.php';
 $ifConnect = ifConnect();
 $profilConsultant = profilConsultant();
 ?>
@@ -38,7 +39,7 @@ $profilConsultant = profilConsultant();
   </thead>
   <tbody>
     <tr>
-      <th scope="row">Tenue à la charge</th>
+      <th scope="row"><?php echo $nomDuProjet;?></th>
       <td>Les details de la descriptions sont à definir avec le client</td>
       <td>
       <div class="progress">

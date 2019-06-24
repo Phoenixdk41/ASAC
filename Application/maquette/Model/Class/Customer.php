@@ -4,9 +4,6 @@ Class Customer {
     private $_Id_Customer;
     private $_Customer_Name;
 
-
-
-
     
     //Getters and setters
     public function getId_Customer()

@@ -15,7 +15,7 @@
   </li>
 
   <li class="nav-item">
-    <a class="nav-link" id="dailyPage" data-toggle="tab" href="http://maquette/Templates/Settings/parametres.php" 
+    <a class="nav-link" id="dailyPage" data-toggle="tab" href="http://maquette/Templates/parametres.php" 
     role="tab" aria-controls="contact" aria-selected="false">Paramétrage</a>
   </li>
 
