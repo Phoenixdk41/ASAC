@@ -1,15 +1,11 @@
 <?php
-include 'connection.php'
-$_POST['nameConsultantDel'] = $toDel;
+include 'connection.php';
+$toDel = $_POST['nameConsultantDel'];
 
 
-$bdd = $asac->query('delete from ')
+$bdd = $asac->query('delete from application_user where Last_Name = "'.$toDel .'"');
 
+echo("Le consultant  " . $toDel . " a bien été supprimé");
 
-/*
-insert into application_user (Id_User, Last_Name, 
-First_Name, login, Password, Mail, Active) values(4,'FONTAINE','VALENTIN',
-'VFO','azerty','valentin.fontaine@altran.com',1);
-*/
 
 ?>
