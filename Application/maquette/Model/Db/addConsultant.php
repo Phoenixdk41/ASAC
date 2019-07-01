@@ -19,7 +19,7 @@ Active) values (
 "'.$password.'",
 "'.$login.'",
 "'.$email.'",
-"'.$activate.'"');
+"'.$activate.'";');
 
 
 
